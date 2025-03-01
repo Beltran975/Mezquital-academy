@@ -9,8 +9,8 @@
         <li class="nav-item"><a class="nav-link" href="#simulaciones">Simulaciones</a></li>
         <li class="nav-item"><a class="nav-link" href="#casos-practicos">Casos Prácticos</a></li>
         <li class="nav-item"><a class="nav-link" href="#sobre-nosotros">Herramientas</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacto">Noticias</a></li>
-      </ul>
+        <li class="nav-item"><a class="nav-link" href="{{ route('news.index') }}">Noticias</a>
+</li>      </ul>
     </div>
   </div>
 </nav>
