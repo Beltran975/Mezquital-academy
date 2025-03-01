@@ -23,4 +23,4 @@
 ### 🏠 4. Vista de Inicio (`resources/home.blade.php`)  
 🖥️ **Página específica** que extiende la plantilla base con `@extends('layouts.app')`.  
 🗂️ Define el contenido principal en `@section('content')`.  
-🎨 Puede tener su propio archivo de estilos si es necesario.  
+
