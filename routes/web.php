@@ -1,19 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ToolController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\ToolController; // Ensure this controller exists in the specified namespace
+use App\Http\Controllers\CasoController;
 
 use App\Http\Controllers\PracticasController;
 use App\Http\Controllers\QuizController;
 
-// Página de inicio
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
-// Noticias
+Route::get('/herramientas', [ToolController::class, 'index'])->name('tools.index');
 Route::get('/noticias', [NewsController::class, 'index'])->name('news.index');
+<<<<<<< HEAD
 
 Route::get('/inicio-simulaciones', function () {
     return view('simulaciones');
@@ -39,3 +45,6 @@ Route::post('/verificar-contrasena', [PracticasController::class, 'verificarCont
 Route::get('/practicas/archivos', [PracticasController::class, 'mostrarArchivos']);
 Route::post('/practicas/archivos', [PracticasController::class, 'procesarArchivos'])->name('procesarArchivos');
 
+=======
+Route::get('/casos-practicos', [CasoController::class, 'index'])->name('casos.index');
+>>>>>>> Noticias
