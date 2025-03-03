@@ -19,7 +19,6 @@ Route::get('/', function () {
 
 Route::get('/herramientas', [ToolController::class, 'index'])->name('tools.index');
 Route::get('/noticias', [NewsController::class, 'index'])->name('news.index');
-<<<<<<< HEAD
 
 Route::get('/inicio-simulaciones', function () {
     return view('simulaciones');
@@ -45,6 +44,9 @@ Route::post('/verificar-contrasena', [PracticasController::class, 'verificarCont
 Route::get('/practicas/archivos', [PracticasController::class, 'mostrarArchivos']);
 Route::post('/practicas/archivos', [PracticasController::class, 'procesarArchivos'])->name('procesarArchivos');
 
-=======
 Route::get('/casos-practicos', [CasoController::class, 'index'])->name('casos.index');
->>>>>>> Noticias
+
+Route::get('/herramientas', [ToolController::class, 'index'])->name('tools.index');
+
+Route::get('/recuros-educativos', [ResourceController::class, 'index'])->name('resources.index');
+
