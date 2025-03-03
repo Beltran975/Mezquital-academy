@@ -32,7 +32,7 @@ class PracticasController extends Controller
             ];
         }
 
-        return view('practicas.generarContrasena', compact('mensaje'));
+        return view('generarContraseña', compact('mensaje'));
     }
 
     public function mostrarArchivos()
@@ -49,7 +49,7 @@ class PracticasController extends Controller
         // Almacenar los archivos en la sesión
         session(['archivos' => $archivos]);
 
-        return view('practicas.archivos', compact('archivos'));
+        return view('archivos', compact('archivos'));
     }
 
     public function procesarArchivos(Request $request)
@@ -76,6 +76,6 @@ class PracticasController extends Controller
             $resultado['mensaje'] = 'Algunos archivos fueron identificados incorrectamente. Intenta de nuevo.';
         }
 
-        return view('practicas.archivos', compact('resultado', 'archivos'));
+        return view('archivos', compact('resultado', 'archivos'));
     }
 }
