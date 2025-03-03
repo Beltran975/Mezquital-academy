@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ToolController; // Ensure this controller exists in the specified namespace
+
 use App\Http\Controllers\PracticasController;
 use App\Http\Controllers\QuizController;
 

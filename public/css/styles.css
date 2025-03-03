@@ -79,6 +79,7 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 60px;
+  color: #fff;
 }
 .feature-grid {
   display: grid;
@@ -91,6 +92,13 @@ body {
   padding: 40px 30px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Alinea el contenido y el botón */
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 .feature-card i {
   font-size: 4rem;
@@ -106,6 +114,22 @@ body {
 .feature-card p {
   font-size: 1.1rem;
   color: #ccc;
+  margin-bottom: 20px; /* Espacio entre el texto y el botón */
+}
+.button-container {
+  text-align: center; /* Centra el botón */
+}
+.feature-card .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.feature-card .btn:hover {
+  background-color: var(--primary-color);
 }
 
 /* Responsive */
