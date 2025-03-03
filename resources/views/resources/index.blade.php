@@ -8,7 +8,6 @@
             <div class="feature-grid">
                 @foreach ($resources as $resource)
                     <div class="feature-card" data-aos="fade-up" data-aos-duration="1200">
-                        {{-- Seleccionar el ícono según el tipo de recurso --}}
                             <i class="fas fa-graduation-cap"></i>
 
 
