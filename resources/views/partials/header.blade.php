@@ -8,6 +8,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#simulaciones">Simulaciones</a></li>
         <li class="nav-item"><a class="nav-link" href="#casos-practicos">Casos Prácticos</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('resources.index') }}">Recursos Educativos</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('tools.index') }}">Herramientas</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('news.index') }}">Noticias</a></li>
       </ul>

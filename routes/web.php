@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\ToolController; // Ensure this controller exists in the specified namespace
 
 
@@ -14,3 +15,5 @@ Route::get('/', function () {
 Route::get('/noticias', [NewsController::class, 'index'])->name('news.index');
 
 Route::get('/herramientas', [ToolController::class, 'index'])->name('tools.index');
+
+Route::get('/recuros-educativos', [ResourceController::class, 'index'])->name('resources.index');
