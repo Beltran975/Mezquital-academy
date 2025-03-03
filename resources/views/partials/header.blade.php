@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#simulaciones">Simulaciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('inicioSimulaciones') }}">Simulaciones</a></li>
         <li class="nav-item"><a class="nav-link" href="#casos-practicos">Casos Prácticos</a></li>
         <li class="nav-item"><a class="nav-link" href="#sobre-nosotros">Herramientas</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('news.index') }}">Noticias</a>
