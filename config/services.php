@@ -34,8 +34,15 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+
+    'openai' => [
+        'key' => env('OPENAI_API_KEY'),
+    ],
+
+
     'newsapi' => [
     'key' => env('NEWSAPI_KEY'),
-    ],
+],
+    
 
 ];
