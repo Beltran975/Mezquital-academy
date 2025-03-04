@@ -1,6 +1,6 @@
 :root {
   --primary-color: #0d0d0d;       /* Fondo principal (navbar, footer) */
-  --secondary-color: #39ff14;     /* Neón verde para acentos */
+  --secondary-color: #007bff;      /* Neón verde para acentos */
   --light-color: #1a1a1a;         /* Fondo de secciones (p.ej., features) */
   --dark-overlay: rgba(13, 13, 13, 0.85);
   --card-bg: #242424;             /* Fondo de tarjetas */

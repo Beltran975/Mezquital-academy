@@ -10,6 +10,27 @@
         <li class="nav-item"><a class="nav-link" href="{{ route('casos.index') }}">Casos Prácticos</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('tools.index') }}">Herramientas</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('news.index') }}">Noticias</a></li>
+
+        @auth
+          <!-- Usuario autenticado -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              {{ Auth::user()->name }}
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="{{ route('profile.edit') }}">Editar perfil</a>
+            </li>
+            <li>
+              <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="dropdown-item">Cerrar sesión</button>
+              </form>
+            </li>
+            </ul>
+          </li>
+        @endauth
+      </ul>
     </div>
   </div>
 </nav>

@@ -48,19 +48,6 @@
                   </div>
               </div>
 
-              <div class="tool-card full-width" data-aos="fade-up" data-aos-duration="1800">
-                  <div class="tool-icon">
-                      <i class="fas fa-wrench"></i> <!-- Icono de herramientas -->
-                  </div>
-                  <h3>Wappalyzer</h3>
-                  <p>
-                      ¿Te has preguntado qué tecnologías están detrás de tu sitio web favorito? Wappalyzer te lo dice en segundos, revelando frameworks, CMS, herramientas de análisis y mucho más.  
-                  </p>
-                  <div class="button-container">
-                      <a href="https://www.wappalyzer.com" target="_blank" class="btn btn-primary">Visitar</a>
-                  </div>
-              </div>
-
               <div class="tool-card full-width" data-aos="fade-up" data-aos-duration="2000">
                   <div class="tool-icon">
                       <i class="fas fa-exclamation-triangle"></i> <!-- Icono de alerta -->
