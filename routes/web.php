@@ -9,6 +9,8 @@ use App\Http\Controllers\PracticasController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SimulacionController;
+use App\Http\Controllers\ResourceController;
 
 
     // Rutas públicas
@@ -54,4 +56,7 @@ use App\Http\Controllers\AuthController;
 
     // Cerrar sesión
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    
+    Route::get('/simulaciones/ataques', [SimulacionController::class, 'mostrarAtaques'])->name('mostrarAtaques');
 });

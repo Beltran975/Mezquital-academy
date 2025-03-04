@@ -3,6 +3,15 @@
 @section('title', 'Herramientas Recomendadas - Mezquital Academy')
 
 @section('content')
+    <!-- Hero Section para Herramientas -->
+<section class="hero">
+    <div class="container">
+        <h1 data-aos="fade-up" data-aos-duration="1000">Herramientas de Ciberseguridad</h1>
+        <p data-aos="fade-up" data-aos-duration="1200">
+            Explora y utiliza las mejores herramientas para proteger tus sistemas, analizar vulnerabilidades y fortalecer tu seguridad digital.
+        </p>
+    </div>
+</section>
   <section class="tools-section">
       <div class="container">
           <h2 data-aos="fade-up" data-aos-duration="1000">Herramientas Recomendadas</h2>

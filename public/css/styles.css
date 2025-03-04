@@ -355,6 +355,109 @@ html {
   font-size: 1.5rem;
   cursor: pointer;
 }
+.simulacion-container {
+  text-align: center;
+  margin-top: 40px;
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fake-email {
+  background: #ffffff;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  text-align: left;
+}
+
+.fake-email-header {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.fake-email-body {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.fake-email-footer {
+  padding: 15px;
+  background: #f4f4f4;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.email-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.email-btn:hover {
+  background: #2fff2b;
+}
+
+/* Estilos para los botones de elección */
+.choice-buttons {
+  margin-top: 20px;
+}
+
+.choice-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.choice-btn:hover {
+  background: #2fff2b;
+}
+
+/* Mensajes de resultado */
+.resultado {
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: bold;
+  display: none;
+}
+
+.resultado.correcto {
+  background: rgba(0, 255, 0, 0.2);
+  border-left: 5px solid green;
+  color: green;
+}
+
+.resultado.incorrecto {
+  background: rgba(255, 0, 0, 0.2);
+  border-left: 5px solid red;
+  color: red;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.75rem; }

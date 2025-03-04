@@ -3,17 +3,18 @@
 @section('title', 'Casos Prácticos - Mezquital Academy')
 
 @section('content')
+<!-- Hero Section para Casos Prácticos -->
+<section class="hero">
+    <div class="container">
+        <h1 data-aos="fade-up" data-aos-duration="1000">Casos Prácticos de Ciberseguridad</h1>
+        <p data-aos="fade-up" data-aos-duration="1200">
+            Aprende de casos históricos que marcaron la ciberseguridad y descubre cómo protegerte de situaciones cotidianas que podrías enfrentar.
+        </p>
+    </div>
+</section>
   <section class="casos-section">
       <div class="container">
           <h2 data-aos="fade-up" data-aos-duration="1000">Casos Prácticos</h2>
-
-          <!-- Filtros -->
-          <div class="filters" data-aos="fade-up" data-aos-duration="1200">
-              <a href="#historicos" class="filter-button active" data-filter="all">Todos</a>
-              <a href="#historicos" class="filter-button" data-filter="historicos">Históricos</a>
-              <a href="#cotidianos" class="filter-button" data-filter="cotidianos">Cotidianos</a>
-          </div>
-
           <!-- Casos Históricos -->
           <h3 class="subtitle" id="historicos" data-aos="fade-up" data-aos-duration="1400">Casos Históricos</h3>
           <div class="casos-grid">
@@ -136,6 +137,126 @@
                       </a>
                   </div>
               </div>
+
+              <!-- Caso 7: Target -->
+              <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Ataque a Target (2013)</h3>
+                  <p>
+                      Un ataque de ciberseguridad expuso los datos de más de 40 millones de tarjetas de crédito y débito de clientes de Target.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.nytimes.com/2014/01/11/business/target-breach-affected-70-million-customers.html" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Ataque a Target (2013)" 
+                         data-description="Un ataque de ciberseguridad expuso los datos de más de 40 millones de tarjetas de crédito y débito de clientes de Target.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 8: Marriott International -->
+              <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Ataque a Marriott International (2018)</h3>
+                  <p>
+                      Una brecha de seguridad expuso los datos personales de aproximadamente 500 millones de huéspedes de Marriott.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.bbc.com/news/business-46368478" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Ataque a Marriott International (2018)" 
+                         data-description="Una brecha de seguridad expuso los datos personales de aproximadamente 500 millones de huéspedes de Marriott.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 9: NotPetya -->
+              <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Ataque a NotPetya (2017)</h3>
+                  <p>
+                      Un ransomware que afectó a empresas en todo el mundo, causando pérdidas millonarias.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Ataque a NotPetya (2017)" 
+                         data-description="Un ransomware que afectó a empresas en todo el mundo, causando pérdidas millonarias.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 10: SolarWinds -->
+              <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Ataque a SolarWinds (2020)</h3>
+                  <p>
+                      Un ataque de cadena de suministro comprometió a varias agencias gubernamentales y empresas privadas.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.nytimes.com/2021/01/06/us/politics/russian-hackers-us-government.html" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Ataque a SolarWinds (2020)" 
+                         data-description="Un ataque de cadena de suministro comprometió a varias agencias gubernamentales y empresas privadas.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 11: Ashley Madison -->
+              <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Ataque a Ashley Madison (2015)</h3>
+                  <p>
+                      Una filtración de datos expuso la información personal de usuarios del sitio web de citas Ashley Madison.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.bbc.com/news/technology-34044506" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Ataque a Ashley Madison (2015)" 
+                         data-description="Una filtración de datos expuso la información personal de usuarios del sitio web de citas Ashley Madison.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 12: LinkedIn -->
+              <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Ataque a LinkedIn (2012)</h3>
+                  <p>
+                      Una brecha de seguridad expuso las contraseñas de más de 6 millones de usuarios de LinkedIn.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.nytimes.com/2012/06/11/technology/linkedin-says-some-passwords-were-stolen.html" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Ataque a LinkedIn (2012)" 
+                         data-description="Una brecha de seguridad expuso las contraseñas de más de 6 millones de usuarios de LinkedIn.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
           </div>
 
           <!-- Casos Cotidianos -->
@@ -241,7 +362,127 @@
                   </div>
               </div>
 
-              <!-- Caso 6: Fuga de Datos en la Nube -->
+              <!-- Caso 6: Fuga de Datos por Configuración Incorrecta en la Nube -->
+              <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Fuga de Datos por Configuración Incorrecta en la Nube</h3>
+                  <p>
+                      Una empresa expuso datos sensibles de sus clientes debido a una configuración incorrecta en su almacenamiento en la nube.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://techcrunch.com/2021/01/22/cloud-misconfiguration-data-leak/" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Fuga de Datos por Configuración Incorrecta en la Nube" 
+                         data-description="Una empresa expuso datos sensibles de sus clientes debido a una configuración incorrecta en su almacenamiento en la nube.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 7: Phishing: Correos de Suplantación de Identidad -->
+              <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Phishing: Correos de Suplantación de Identidad</h3>
+                  <p>
+                      Un usuario recibió un correo electrónico que parecía ser de su banco, pero era una estafa para robar sus credenciales.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.kaspersky.com/resource-center/threats/phishing" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Phishing: Correos de Suplantación de Identidad" 
+                         data-description="Un usuario recibió un correo electrónico que parecía ser de su banco, pero era una estafa para robar sus credenciales.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 8: Robo de Datos a Través de Redes Sociales -->
+              <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Robo de Datos a Través de Redes Sociales</h3>
+                  <p>
+                      Un usuario compartió demasiada información personal en redes sociales, lo que permitió a un atacante suplantar su identidad.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.consumer.ftc.gov/articles/0009-identity-theft" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Robo de Datos a Través de Redes Sociales" 
+                         data-description="Un usuario compartió demasiada información personal en redes sociales, lo que permitió a un atacante suplantar su identidad.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 9: Ataque de Ransomware a una Pequeña Empresa -->
+              <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Ataque de Ransomware a una Pequeña Empresa</h3>
+                  <p>
+                      Una pequeña empresa fue víctima de un ataque de ransomware que cifró sus archivos y exigió un rescate.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.forbes.com/sites/leemathews/2021/03/15/google-removes-malicious-android-apps-with-over-3-million-downloads/" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Ataque de Ransomware a una Pequeña Empresa" 
+                         data-description="Una pequeña empresa fue víctima de un ataque de ransomware que cifró sus archivos y exigió un rescate.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 10: Fuga de Datos por Configuración Incorrecta en la Nube -->
+              <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Fuga de Datos por Configuración Incorrecta en la Nube</h3>
+                  <p>
+                      Una empresa expuso datos sensibles de sus clientes debido a una configuración incorrecta en su almacenamiento en la nube.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://techcrunch.com/2021/01/22/cloud-misconfiguration-data-leak/" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Fuga de Datos por Configuración Incorrecta en la Nube" 
+                         data-description="Una empresa expuso datos sensibles de sus clientes debido a una configuración incorrecta en su almacenamiento en la nube.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>
+
+              <!-- Caso 11: Ataque de SIM Swapping 
+              <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
+                  <div class="caso-icon">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                  </div>
+                  <h3>Ataque de SIM Swapping</h3>
+                  <p>
+                      Un atacante convenció a una compañía telefónica para transferir el número de teléfono de una víctima a una tarjeta SIM bajo su control, permitiéndole acceder a cuentas bancarias.
+                  </p>
+                  <div class="button-container">
+                      <a href="https://www.wired.com/story/sim-swapping-phone-theft/" 
+                         class="btn btn-primary leer-mas" 
+                         target="_blank" 
+                         data-title="Ataque de SIM Swapping" 
+                         data-description="Un atacante convenció a una compañía telefónica para transferir el número de teléfono de una víctima a una tarjeta SIM bajo su control, permitiéndole acceder a cuentas bancarias.">
+                          Leer más
+                      </a>
+                  </div>
+              </div>-->
+
+              <!-- Caso 12: Fuga de Datos por Configuración Incorrecta en la Nube -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>

@@ -3,6 +3,15 @@
 @section('title', 'Noticias de Ciberseguridad - Mezquital Academy')
 
 @section('content')
+<!-- Hero Section para Noticias -->
+<section class="hero">
+    <div class="container">
+        <h1 data-aos="fade-up" data-aos-duration="1000">Noticias de Ciberseguridad</h1>
+        <p data-aos="fade-up" data-aos-duration="1200">
+            Mantente informado con las últimas novedades, tendencias y análisis en el mundo de la ciberseguridad.
+        </p>
+    </div>
+</section>
   <section class="features">
       <div class="container">
           <h2 data-aos="fade-up" data-aos-duration="1000">Noticias de Ciberseguridad</h2>
