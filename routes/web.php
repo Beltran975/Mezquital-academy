@@ -29,8 +29,6 @@ use App\Http\Controllers\ResourceController;
     Route::get('/perfil/editar', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/perfil/actualizar', [ProfileController::class, 'update'])->name('profile.update');
 
-    Route::get('/recuros-educativos', [ResourceController::class, 'index'])->name('resources.index');
-
     Route::get('/herramientas', [ToolController::class, 'index'])->name('tools.index');
     Route::get('/noticias', [NewsController::class, 'index'])->name('news.index');
 
