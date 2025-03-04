@@ -59,4 +59,6 @@ use App\Http\Controllers\ResourceController;
 
     
     Route::get('/simulaciones/ataques', [SimulacionController::class, 'mostrarAtaques'])->name('mostrarAtaques');
+    Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
+
 });

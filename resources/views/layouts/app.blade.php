@@ -27,21 +27,60 @@
     @yield('content')
   </main>
 
-  <!-- Incluye el footer -->
-  @include('partials.footer')
+ <!-- Incluye el footer -->
+ @include('partials.footer')
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <!-- Burbuja de chat (Fuera del main para que siempre esté disponible) -->
-  <div class="chat-bubble" id="chatBubble">💬</div>
+<!-- Burbuja de chat (Fuera del main para que siempre esté disponible) -->
+<div class="chat-bubble" id="chatBubble">💬</div>
 
-  <!-- Ventana de chat -->
-  <div class="chat-window" id="chatWindow">
-    <div class="chat-header">Asistente AI</div>
-    <div class="chat-body" id="chatBody"></div>
-    <div class="chat-footer">
-      <input type="text" id="chatInput" placeholder="Escribe un mensaje...">
-      <button id="sendButton">➤</button>
-    </div>
+<!-- Ventana de chat -->
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">Asistente AI</div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-footer">
+    <input type="text" id="chatInput" placeholder="Escribe un mensaje...">
+    <button id="sendButton">➤</button>
   </div>
+</div>
+
+<script>
+    document.getElementById("chatBubble").addEventListener("click", function () {
+        var chatWindow = document.getElementById("chatWindow");
+        chatWindow.style.display = chatWindow.style.display === "none" ? "flex" : "none";
+    });
+
+    document.getElementById("sendButton").addEventListener("click", sendMessage);
+    document.getElementById("chatInput").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") sendMessage();
+    });
+
+    function sendMessage() {
+        let input = document.getElementById("chatInput");
+        let message = input.value.trim();
+        if (message === "") return;
+
+        let chatBody = document.getElementById("chatBody");
+        chatBody.innerHTML += `<div><strong>Tú:</strong> ${message}</div>`;
+        input.value = "";
+
+        fetch("/chat", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content")
+            },
+            body: JSON.stringify({ message: message })
+        })
+        .then(response => response.json())
+        .then(data => {
+            let aiResponse = data.choices[0]?.message?.content || "Error al obtener respuesta.";
+            chatBody.innerHTML += `<div><strong>AI:</strong> ${aiResponse}</div>`;
+            chatBody.scrollTop = chatBody.scrollHeight;
+        })
+        .catch(error => console.error("Error:", error));
+    }
+  </script>
 
  <!-- Estilos de la burbuja y el chat -->
 <style>
@@ -162,48 +201,7 @@
 
 
 
-  <!-- Script de JavaScript -->
-  <script>
-    document.getElementById("chatBubble").addEventListener("click", function () {
-        var chatWindow = document.getElementById("chatWindow");
-        chatWindow.style.display = chatWindow.style.display === "none" ? "flex" : "none";
-    });
-
-    document.getElementById("sendButton").addEventListener("click", function () {
-        sendMessage();
-    });
-
-    document.getElementById("chatInput").addEventListener("keypress", function (e) {
-        if (e.key === "Enter") sendMessage();
-    });
-
-    function sendMessage() {
-        let input = document.getElementById("chatInput");
-        let message = input.value.trim();
-        if (message === "") return;
-
-        let chatBody = document.getElementById("chatBody");
-        chatBody.innerHTML += `<div><strong>Tú:</strong> ${message}</div>`;
-        input.value = "";
-
-        fetch("/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRF-TOKEN": "{{ csrf_token() }}",
-            },
-            body: JSON.stringify({ message: message }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            let aiResponse = data.choices[0]?.message?.content || "Error al obtener respuesta.";
-            chatBody.innerHTML += `<div><strong>AI:</strong> ${aiResponse}</div>`;
-            chatBody.scrollTop = chatBody.scrollHeight;
-        })
-        .catch(error => console.error("Error:", error));
-    }
-  </script>
-
+  
   <!-- Scripts externos -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
