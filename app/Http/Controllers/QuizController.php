@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class QuizController extends Controller
 {
@@ -52,7 +53,7 @@ class QuizController extends Controller
         // Calcular el puntaje
         $puntaje = ($respuestasCorrectas / count($preguntas)) * 100;
 
-        // Pasar también las preguntas a la vista de resultados
+        return View::make('resultado', compact('puntaje', 'respuestasCorrectas', 'preguntas'));
         return view('resultado', compact('puntaje', 'respuestasCorrectas', 'preguntas'));
     }
 }
