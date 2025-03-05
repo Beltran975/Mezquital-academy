@@ -1,6 +1,6 @@
 /* public/css/header.css */
 .navbar-custom {
-    background: transparent;
+    background: #0d0c0c;
     transition: background 0.3s ease, padding 0.3s ease;
     padding: 1.5rem 1rem;
     position: fixed;
@@ -27,3 +27,54 @@
     transform: translateY(-2px);
   }
   
+  .dropdown-menu {
+    background-color: #121212; /* Fondo negro suave */
+    border: none;
+    border-radius: 6px;
+    padding: 4px 0;
+    min-width: 150px;
+}
+
+.dropdown-item {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    color: #007bff;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: #1a1a1a; /* Sutil cambio en hover */
+    color: #40a9ff;
+}
+
+.dropdown-item:active {
+    background-color: #252525;
+}
+
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+/* Botón de cerrar sesión con mismo estilo */
+.dropdown-item button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    color: #007bff;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dropdown-item button:hover {
+    background-color: #1a1a1a;
+    color: #40a9ff;
+}
+
+.nav-link.active {
+  color: #007bff !important; /* Azul brillante */
+  font-weight: bold;
+  border-bottom: 2px solid #007bff; /* Línea de resaltado */
+}

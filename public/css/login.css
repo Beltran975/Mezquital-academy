@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #0d0d0d;       /* Fondo principal */
+    --secondary-color: #007bff;     /* Azul para "Iniciar sesión" */
+    --tertiary-color: #ff0000;      /* Rojo para "Registrarse" */
+    --light-color: #1a1a1a;         /* Fondo de secciones */
+    --card-bg: #242424;             /* Fondo de tarjetas */
+    --transition-speed: 0.3s;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all var(--transition-speed) ease-in-out;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Asegura que todo esté centrado en la columna */
+    margin: 0;
+  }
+  
+  /* Título fuera del contenedor y centrado en la parte superior */
+  .page-title {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px; /* Espacio entre el título y el formulario */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Estilo específico para el formulario de login */
+  .login-container {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-container form {
+    width: 100%;
+  }
+  
+  .login-container label {
+    font-size: 1rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  
+  .login-container input {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: all var(--transition-speed);
+  }
+  
+  .login-container input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    background-color: #555;
+  }
+  
+  /* Contenedor para los botones (alineación horizontal) */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  /* Estilo para los botones (más pequeños) */
+  .button-container button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #fff;
+    flex: 1;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+  }
+  
+  /* Colores diferenciados para cada botón */
+  .button-container button[type="submit"] {
+    background-color: var(--secondary-color); /* Azul para "Iniciar sesión" */
+  }
+  
+  .button-container button[type="button"] {
+    background-color: var(--tertiary-color); /* Rojo para "Registrarse" */
+  }
+  
+  .button-container button:hover {
+    opacity: 0.9;
+  }
+  .error-message {
+    background-color: #f8d7da; /* Color de fondo suave */
+    color: #721c24; /* Rojo oscuro para el texto */
+    padding: 20px;
+    margin-top: 20px; /* Espaciado entre el formulario y el recuadro de errores */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1rem;
+    border: 1px solid #f5c6cb; /* Borde sutil que complementa el fondo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    max-width: 100%; /* Asegura que el recuadro se ajuste al ancho del formulario */
+  }
+  
+  .error-message ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .error-message li {
+    padding: 8px 0;
+    font-weight: 500; /* Peso de fuente un poco más fuerte */
+  }
+  
+  .error-message ul li::before {
+    content: "⚠️ "; /* Icono de advertencia antes del error */
+    font-size: 1.2rem; /* Tamaño de icono más grande */
+    color: #721c24; /* Asegura que el icono sea visible */
+  }
+  
+  .error-message h3 {
+    font-size: 1.2rem; /* Título de la lista de errores */
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #721c24; /* Mismo color que el texto */
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .error-message {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  

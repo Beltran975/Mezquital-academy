@@ -1,0 +1,98 @@
+[
+    {
+      "pregunta": "¿Qué es SQL Injection?",
+      "respuestas": [
+        { "respuesta": "Un tipo de virus informático", "correcta": false },
+        { "respuesta": "Una técnica de hacking que explota las bases de datos", "correcta": true },
+        { "respuesta": "Un tipo de firewall", "correcta": false }
+      ]
+    },
+    {
+      "pregunta": "¿Qué significa XSS?",
+      "respuestas": [
+        { "respuesta": "Cross-Site Scripting", "correcta": true },
+        { "respuesta": "Cross-Site Security", "correcta": false },
+        { "respuesta": "Extremely Safe Script", "correcta": false }
+      ]
+    },
+    {
+        "pregunta": "¿Qué es el phishing?",
+        "respuestas": [
+            { "respuesta": "Un tipo de malware que infecta computadoras", "correcta": false },
+            { "respuesta": "Un ataque en el que los atacantes suplantan una identidad para robar información sensible", "correcta": true },
+            { "respuesta": "Un tipo de software antivirus", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Qué es el spear phishing?",
+        "respuestas": [
+            { "respuesta": "Un tipo de ataque dirigido a un grupo grande de personas", "correcta": false },
+            { "respuesta": "Un ataque dirigido a una persona o grupo específico usando información personalizada", "correcta": true },
+            { "respuesta": "Un ataque para robar contraseñas", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Cuál de los siguientes es un indicador común de un correo de phishing?",
+        "respuestas": [
+            { "respuesta": "El correo viene de una fuente conocida", "correcta": false },
+            { "respuesta": "El correo contiene errores gramaticales o un tono urgente", "correcta": true },
+            { "respuesta": "El correo tiene archivos adjuntos seguros", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Qué técnica de ataque se utiliza en el 'pharming'?",
+        "respuestas": [
+            { "respuesta": "Redirigir el tráfico de una página legítima a una falsa", "correcta": true },
+            { "respuesta": "Suplantar la identidad de un usuario mediante un correo electrónico", "correcta": false },
+            { "respuesta": "Es un ataque basado en malware", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Cómo se puede evitar un ataque de phishing?",
+        "respuestas": [
+            { "respuesta": "No abrir correos electrónicos sospechosos ni hacer clic en enlaces no verificados", "correcta": true },
+            { "respuesta": "Utilizar un software antivirus", "correcta": false },
+            { "respuesta": "Cambiar frecuentemente las contraseñas", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Qué es el vishing?",
+        "respuestas": [
+            { "respuesta": "Un ataque de phishing a través de llamadas telefónicas", "correcta": true },
+            { "respuesta": "Un tipo de virus informático", "correcta": false },
+            { "respuesta": "Un ataque de denegación de servicio", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Qué significa el término 'spoofing' en ciberseguridad?",
+        "respuestas": [
+            { "respuesta": "Suplantación de identidad, generalmente de un servidor o dirección IP", "correcta": true },
+            { "respuesta": "Interceptar datos durante la transmisión", "correcta": false },
+            { "respuesta": "Acceder a una cuenta a través de una vulnerabilidad de software", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Qué es un ataque de Man-in-the-Middle (MITM)?",
+        "respuestas": [
+            { "respuesta": "Un ataque donde el atacante se interpone entre dos partes para interceptar o modificar la comunicación", "correcta": true },
+            { "respuesta": "Un ataque que se dirige a una red de computadoras", "correcta": false },
+            { "respuesta": "Un ataque que implica la destrucción de datos", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Qué es el ransomware?",
+        "respuestas": [
+            { "respuesta": "Un tipo de software que robar información personal", "correcta": false },
+            { "respuesta": "Un tipo de malware que cifra archivos y exige un rescate para descifrarlos", "correcta": true },
+            { "respuesta": "Un ataque dirigido a sistemas de redes inalámbricas", "correcta": false }
+        ]
+    },
+    {
+        "pregunta": "¿Cuál de los siguientes es un ejemplo de ingeniería social?",
+        "respuestas": [
+            { "respuesta": "Convencer a una persona para que revele información confidencial a través de engaños", "correcta": true },
+            { "respuesta": "Explotar vulnerabilidades de un sistema", "correcta": false },
+            { "respuesta": "Instalar un virus en una computadora para robar información", "correcta": false }
+        ]
+    }
+]
