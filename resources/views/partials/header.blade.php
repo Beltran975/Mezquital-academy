@@ -5,14 +5,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav me-auto"> <!-- Elementos de navegación normales -->
         <li class="nav-item">
           <a class="nav-link {{ Request::routeIs('inicioSimulaciones') ? 'active' : '' }}"
              href="{{ route('inicioSimulaciones') }}">Simulaciones</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::routeIs('casos.index') ? 'active' : '' }}"
-             href="{{ route('casos.index') }}">Casos Prácticos</a>
+             href="{{ route('casos.index') }}">Curiosidades</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::routeIs('tools.index') ? 'active' : '' }}"
@@ -20,15 +20,17 @@
         </li>
         <li class="nav-item">
             <a class="nav-link {{ Request::routeIs('resources.index') ? 'active' : '' }}"
-               href="{{ route('resources.index') }}">Recursos Educativos</a>
-          </li>
+               href="{{ route('resources.index') }}">Educacion</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::routeIs('news.index') ? 'active' : '' }}"
              href="{{ route('news.index') }}">Noticias</a>
         </li>
+      </ul>
 
-        @auth
-          <!-- Usuario autenticado -->
+      @auth
+        <!-- Contenedor separado para el nombre del usuario, alineado a la derecha -->
+        <ul class="navbar-nav ms-auto"> <!-- Este bloque se mueve a la derecha -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
               {{ Auth::user()->name }}
@@ -46,8 +48,8 @@
               </li>
             </ul>
           </li>
-        @endauth
-      </ul>
+        </ul>
+      @endauth
     </div>
   </div>
 </nav>

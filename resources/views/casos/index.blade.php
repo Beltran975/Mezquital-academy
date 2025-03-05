@@ -6,7 +6,7 @@
 <!-- Hero Section para Casos Prácticos -->
 <section class="hero">
     <div class="container">
-        <h1 data-aos="fade-up" data-aos-duration="1000">Casos Prácticos de Ciberseguridad</h1>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Curiosidades</h1>
         <p data-aos="fade-up" data-aos-duration="1200">
             Aprende de casos históricos que marcaron la ciberseguridad y descubre cómo protegerte de situaciones cotidianas que podrías enfrentar.
         </p>
@@ -14,7 +14,7 @@
 </section>
   <section class="casos-section">
       <div class="container">
-          <h2 data-aos="fade-up" data-aos-duration="1000">Casos Prácticos</h2>
+          <h2 data-aos="fade-up" data-aos-duration="1000">Curiosides a lo largo del tiempo</h2>
           <!-- Casos Históricos -->
           <h3 class="subtitle" id="historicos" data-aos="fade-up" data-aos-duration="1400">Casos Históricos</h3>
           <div class="casos-grid">

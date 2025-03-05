@@ -1,56 +1,71 @@
+/* styles.css */
 .btn-group-custom {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
+
+/* Modificado en .btn-custom-blue */
 .btn-custom-blue {
     color: #007bff !important;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 900;  /* Hacemos la fuente más gruesa */
+    font-size: 40px;   /* Aumentamos el tamaño de la letra */
     text-align: center;
-    padding: 12px 30px;
+    padding: 4px 3px;
     border: 2px solid #007bff;
-    background-color: transparent;
+    background-color: white;
     text-decoration: none;
-    border-radius: 25px;
+    border-radius: 8px;
     font-family: 'Arial', sans-serif;
     transition: all 0.3s ease;
-}
-
-.btn-custom-blue i,
-.btn-custom-blue span {
-    color: #007bff !important; /* Azul claro */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-custom-blue:hover {
-    background-color: #007bff; /* Fondo azul al pasar el mouse */
-    color: white; /* Letras blancas */
-    transform: scale(1.05); /* Botón se agranda ligeramente */
-    cursor: pointer; /* Cambia el cursor a mano al pasar */
+    background-color: #007bff;
+    border-color: #007bff;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .btn-custom-blue:active {
-    transform: scale(0.98);
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    transform: translateY(1px);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-custom-blue.active {
     background-color: #0056b3;
-    color: white !important;
     border: 2px solid #0056b3;
-    box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
-}
-
-.btn-custom-blue.active:hover {
-    background-color: #0056b3;
-    color: white !important;
-    box-shadow: 0 8px 16px rgba(0, 86, 179, 0.4);
-    transform: scale(1.05);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .spacing-section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+/* Asegura que todas las imágenes de los recursos tengan el mismo tamaño */
+.resource-image {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible dentro de su contenedor */
+    height: 200px; /* Puedes ajustar la altura según tus necesidades */
+    object-fit: cover; /* Asegura que la imagen se recorte y ajuste para llenar el área sin distorsionarse */
+}
+
+/* resources.css */
+
+/* Elimina o ajusta el padding/margin del contenedor si es necesario */
+.features {
+    margin: 0;       /* quita márgenes */
+    padding: 0;      /* quita relleno */
+}
+
+/* Controla márgenes y alineación del título */
+.section-title {
+    margin: 40px 0 0 0;   /* 40px arriba, 0 derecha, 0 abajo, 0 izquierda */
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.2rem;
 }
