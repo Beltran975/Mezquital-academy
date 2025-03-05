@@ -66,4 +66,6 @@ use App\Http\Controllers\ResourceController;
     Route::get('/simulaciones/phishing', [PracticasController::class, 'mostrarPhishing'])->name('mostrarPhishing');
     Route::get('/simulaciones/compras-seguras', [PracticasController::class, 'mostrarComprasSeguras'])->name('practicas.compras-seguras');
     Route::get('/simulaciones/wifi-publico', [PracticasController::class, 'mostrarWiFiPublico'])->name('practicas.wifi-publico');
+    
+    Route::post('/ask',[chatGPTController::class, 'askChat']);
 });
