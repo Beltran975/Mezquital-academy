@@ -3,15 +3,8 @@
 @section('title', 'Simulaciones de Ataques - Mezquital Academy')
 
 @section('content')
-<section class="hero">
-    <div class="container">
-        <h1 data-aos="fade-up" data-aos-duration="1000">Simulación de Ataques</h1>
-        <p data-aos="fade-up" data-aos-duration="1200">
-            Aprende sobre los ataques cibernéticos de manera interactiva. ¡Comienza ahora!
-        </p>
-    </div>
-</section>
-
+<section class="features" id="simulaciones">
+<div class="container">
 <section class="simulacion-container">
     <div class="container">
         <h2 data-aos="fade-up" data-aos-duration="1000">Ejercicio de Simulación</h2>

@@ -6,197 +6,131 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div id="quizContainer" class="quiz-container">
-                <form id="quizForm" action="{{ route('procesar-respuestas') }}" method="POST">
-                    @csrf
-                    <div id="questionBox" class="question-box"></div>
-                    <button id="submitBtn" type="submit" style="display:none;">Enviar respuestas</button>
-                </form>
-                <div id="timer" class="timer"></div>
+        <div id="quizContainer" class="quiz-container">
+            <form id="quizForm">
+            @csrf
+                <div id="questionBox" class="question-box"></div>
+                <button id="submitBtn" type="button" style="display:none;">Enviar respuestas</button>
+            </form>
+            <div id="timer" class="timer"></div>
+            </div>
+
+            <!-- Contenedor de resultados oculto al inicio -->
+            <div id="resultContainer" class="result-container" style="display: none;">
+                <h2>Resultados del Quiz</h2>
+                <p>Respuestas correctas: <span id="correctAnswers">0</span> de <span id="totalQuestions">0</span></p>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <p id="resultMessage"></p>
+                <button onclick="location.reload()" class="restart-btn">Reintentar</button>
             </div>
         </div>
     </section>
 
-    <style>
-        .quiz-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #1a1a1a; /* Negro */
-            padding: 20px;
-            border-radius: 10px;
-            position: relative;
-            min-height: 100vh;
-        }
-
-        .question {
-            background-color: #333; /* Gris oscuro */
-            color: #fff; /* Blanco */
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .answers {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            grid-template-areas: 
-                "answer1 answer2"
-                "answer3 answer3";
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .answer-btn:nth-child(1) {
-            grid-area: answer1;
-            background-color: #1a1a1a; /* Negro */
-            color: #00ff00; /* Verde */
-            border: 2px solid #00ff00;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .answer-btn:nth-child(2) {
-            grid-area: answer2;
-            background-color: #1a1a1a; /* Negro */
-            color: #00ff00; /* Verde */
-            border: 2px solid #00ff00;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .answer-btn:nth-child(3) {
-            grid-area: answer3;
-            background-color: #1a1a1a; /* Negro */
-            color: #00ff00; /* Verde */
-            border: 2px solid #00ff00;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .answer-btn:hover {
-            background-color: #00ff00; /* Verde */
-            color: #1a1a1a; /* Negro */
-        }
-
-        .timer {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #333; /* Gris oscuro */
-            color: #fff; /* Blanco */
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-    </style>
-
     <script>
-        const preguntas = <?php echo json_encode($preguntas); ?>; 
+document.addEventListener("DOMContentLoaded", function () {
+    const preguntas = <?php echo json_encode($preguntas); ?>;
+    let currentQuestionIndex = 0;
+    let timerSeconds = 90;
+    let timerInterval;
+    let correctAnswers = 0;
 
-        let currentQuestionIndex = 0;
-        let timerSeconds = 90;
-        let timerInterval;
+    function updateTimer() {
+        const minutes = Math.floor(timerSeconds / 60);
+        const seconds = timerSeconds % 60;
+        const timerElement = document.getElementById("timer");
 
-        function updateTimer() {
-            const minutes = Math.floor(timerSeconds / 60);
-            const seconds = timerSeconds % 60;
-            const timerElement = document.getElementById("timer");
-
-            if (timerElement) {
-                timerElement.innerText = `Tiempo restante: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            }
+        if (timerElement) {
+            timerElement.innerText = `Tiempo restante: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
+    }
 
-        function startTimer() {
-            timerInterval = setInterval(() => {
-                if (timerSeconds <= 0) {
-                    clearInterval(timerInterval);
-                    const formElement = document.getElementById("quizForm");
-                    if (formElement) {
-                        const lastAnswerIndex = document.querySelector('.answer-btn[data-index]:last-child').getAttribute('data-index');
-                        const hiddenInput = document.createElement('input');
-                        hiddenInput.type = 'hidden';
-                        hiddenInput.name = `respuesta_${currentQuestionIndex}`;
-                        hiddenInput.value = lastAnswerIndex;
-                        formElement.appendChild(hiddenInput);
-                        formElement.submit();
-                    }
-                } else {
-                    timerSeconds--;
-                    updateTimer();
-                }
-            }, 1000);
-        }
-
-        function showNextQuestion() {
-            if (currentQuestionIndex < preguntas.length) {
-                const question = preguntas[currentQuestionIndex];
-                const questionBox = document.getElementById("questionBox");
-
-                if (questionBox) {
-                    questionBox.innerHTML = '';
-
-                    const questionText = document.createElement('p');
-                    questionText.classList.add('question');
-                    questionText.textContent = question.pregunta;
-                    questionBox.appendChild(questionText);
-
-                    const answersDiv = document.createElement('div');
-                    answersDiv.classList.add('answers');
-
-                    question.respuestas.forEach((respuesta, index) => {
-                        const button = document.createElement('button');
-                        button.type = 'button';
-                        button.classList.add('answer-btn');
-                        button.textContent = respuesta.respuesta;
-                        button.setAttribute('data-index', index);
-                        button.onclick = () => nextQuestion(button);
-                        answersDiv.appendChild(button);
-                    });
-
-                    questionBox.appendChild(answersDiv);
-                }
+    function startTimer() {
+        timerInterval = setInterval(() => {
+            if (timerSeconds <= 0) {
+                clearInterval(timerInterval);
+                showResults();
             } else {
-                const formElement = document.getElementById("quizForm");
-                if (formElement) {
-                    formElement.submit();
-                }
+                timerSeconds--;
+                updateTimer();
             }
+        }, 1000);
+    }
+
+    function showNextQuestion() {
+        const questionBox = document.getElementById("questionBox");
+
+        if (currentQuestionIndex < preguntas.length) {
+            const question = preguntas[currentQuestionIndex];
+
+            questionBox.innerHTML = `
+                <p class="question">${question.pregunta}</p>
+                <div class="answers">
+                    ${question.respuestas.map((respuesta, index) => `
+                        <button type="button" class="answer-btn" data-index="${index}" data-correct="${respuesta.correcta}">${respuesta.respuesta}</button>
+                    `).join('')}
+                </div>
+            `;
+
+            document.querySelectorAll(".answer-btn").forEach(button => {
+                button.addEventListener("click", () => nextQuestion(button));
+            });
+        } else {
+            showResults();
+        }
+    }
+
+    function nextQuestion(button) {
+        const answerIndex = button.getAttribute("data-index");
+        const isCorrect = button.getAttribute("data-correct") === "true";
+
+        if (isCorrect) correctAnswers++;
+
+        currentQuestionIndex++;
+        showNextQuestion();
+    }
+
+    function showResults() {
+        clearInterval(timerInterval);
+        document.getElementById("quizContainer").style.display = "none";
+        document.getElementById("resultContainer").style.display = "block";
+
+        document.getElementById("correctAnswers").innerText = correctAnswers;
+        document.getElementById("totalQuestions").innerText = preguntas.length;
+
+        let porcentaje = (correctAnswers / preguntas.length) * 100;
+        document.getElementById("progressFill").style.width = porcentaje + "%";
+
+        let mensaje = "";
+        if (porcentaje >= 80) {
+            mensaje = "¡Excelente trabajo! 🚀";
+        } else if (porcentaje >= 50) {
+            mensaje = "¡Bien hecho! Pero aún puedes mejorar. 💪";
+        } else {
+            mensaje = "Necesitas estudiar más. 📚";
         }
 
-        function nextQuestion(button) {
-            const answerIndex = button.getAttribute('data-index');
-            const hiddenInput = document.createElement('input');
-            hiddenInput.type = 'hidden';
-            hiddenInput.name = `respuesta_${currentQuestionIndex}`;
-            hiddenInput.value = answerIndex;
-            const formElement = document.getElementById("quizForm");
-            if (formElement) {
-                formElement.appendChild(hiddenInput);
-            }
+        document.getElementById("resultMessage").innerText = mensaje;
+    }
 
-            currentQuestionIndex++;
-            showNextQuestion();
-        }
+    document.getElementById("quizContainer").innerHTML = `
+        <button id="startQuizBtn" class="start-btn">Iniciar Quiz</button>
+    `;
 
-        window.onload = () => {
-            updateTimer();
+    document.getElementById("startQuizBtn").addEventListener("click", function () {
+        document.getElementById("quizContainer").innerHTML = `
+            <form id="quizForm">
+                <div id="questionBox" class="question-box"></div>
+                <button id="submitBtn" type="button" style="display:none;">Enviar respuestas</button>
+            </form>
+            <div id="timer" class="timer"></div>
+        `;
 
-            startTimer();
-            showNextQuestion();
-        };
+        updateTimer();
+        startTimer();
+        showNextQuestion();
+    });
+});
     </script>
 @endsection

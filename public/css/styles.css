@@ -74,8 +74,10 @@ body {
   padding: 100px 20px;
   background: var(--light-color);
   text-align: center;
+  
 }
 .features h2 {
+  margin-top: 20px;
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 60px;
@@ -480,9 +482,244 @@ html {
   object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
 }
 
+.question {
+  background-color: var(--card-bg);
+  color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 0 auto 20px;
+  width: 90%;
+  max-width: 600px;
+  font-size: 1.4em;
+  font-weight: bold;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más suave */
+  transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+  flex-shrink: 0;
+  margin-top: 100px;
+}
+
+.question:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al hacer hover */
+}
+
+.question::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--secondary-color);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-grow: 1; /* Permite que las respuestas ocupen el espacio restante */
+}
+.answer-btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.answer-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.answer-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.timer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.timer:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.result-container {
+  text-align: center;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 20px;
+  background: #444;
+  border-radius: 10px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #28a745;
+  transition: width 1s ease-in-out;
+}
+
+.restart-btn {
+  background: #ff4757;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.start-btn {
+  background: linear-gradient(45deg, #1e90ff, #007bff);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.start-btn:hover {
+  background: linear-gradient(45deg, #007bff, #1e90ff);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7);
+}
+
+.start-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+}
+.email img {
+  width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
+  height: 300px; /* Establece una altura fija */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  border-radius: 8px; /* Opcional: añade bordes redondeados */
+}
+/* Estilos para la lista de opciones */
+.opciones {
+  margin-top: 20px;
+}
+
+.opciones ul {
+  list-style: none;
+  padding: 0;
+}
+
+.opciones li {
+  margin-bottom: 15px;
+}
+
+.choice-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choice-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.choice-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Estilos para el contenedor de las opciones de tienda */
+.tienda-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas */
+  margin-top: 20px;
+}
+
+.tienda {
+  width: 45%; /* Ancho de cada tarjeta */
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Asegura que las imágenes no se salgan del contenedor */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tienda:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+/* Estilos para las imágenes */
+.tienda img {
+  width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+  height: 300px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.75rem; }
   .hero p { font-size: 1.2rem; }
   .features h2 { font-size: 2.5rem; }
+}
+@media (max-width: 768px) {
+  .question {
+    font-size: 1.2em; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    padding: 15px;
+  }
+
+  .answers {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
+  }
 }
