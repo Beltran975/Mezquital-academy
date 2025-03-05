@@ -1,0 +1,56 @@
+.btn-group-custom {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.btn-custom-blue {
+    color: #007bff !important;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 30px;
+    border: 2px solid #007bff;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-blue i,
+.btn-custom-blue span {
+    color: #007bff !important; /* Azul claro */
+}
+
+.btn-custom-blue:hover {
+    background-color: #007bff; /* Fondo azul al pasar el mouse */
+    color: white; /* Letras blancas */
+    transform: scale(1.05); /* Botón se agranda ligeramente */
+    cursor: pointer; /* Cambia el cursor a mano al pasar */
+}
+
+.btn-custom-blue:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.btn-custom-blue.active {
+    background-color: #0056b3;
+    color: white !important;
+    border: 2px solid #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
+}
+
+.btn-custom-blue.active:hover {
+    background-color: #0056b3;
+    color: white !important;
+    box-shadow: 0 8px 16px rgba(0, 86, 179, 0.4);
+    transform: scale(1.05);
+}
+
+.spacing-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
