@@ -9,6 +9,7 @@ use App\Http\Controllers\PracticasController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\chatGPTController;
 use App\Http\Controllers\SimulacionController;
 use App\Http\Controllers\ResourceController;
 
@@ -63,4 +64,6 @@ use App\Http\Controllers\ResourceController;
     Route::get('/simulaciones/ataques', [SimulacionController::class, 'mostrarAtaques'])->name('mostrarAtaques');
     Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
 
+    //Solicitudes para chat
+    Route::post('/ask',[chatGPTController::class, 'askChat']);
 });
