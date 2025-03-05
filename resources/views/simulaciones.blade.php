@@ -39,11 +39,11 @@
                         Realiza prácticas de ciberseguridad en un entorno seguro y controlado. ¡Comienza ahora!
                     </p>
                     <div class="button-container">
-                        <a href="{{ route('mostrarPracticas') }}" class="btn btn-primary">Ir a las Prácticas</a>
+                    <a href="{{ route('mostrarPhishing') }}" class="btn btn-primary">Ir a las Prácticas</a>                    </div>
                     </div>
                 </div>
 
-                <!-- Simulación 3: Simulaciones de Ataques -->
+                <!-- Simulación 3: Simulaciones de Ataques 
                 <div class="feature-card" data-aos="fade-up" data-aos-duration="1800">
                     <i class="fas fa-bug"></i>
                     <h3>Simulaciones de Ataques</h3>
@@ -51,9 +51,7 @@
                         Participa en simulaciones de ataques cibernéticos y aprende a defenderte.
                     </p>
                     <div class="button-container">
-                        <a href="{{ route('mostrarAtaques') }}" class="btn btn-primary">Ir a Simulaciones</a>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
