@@ -12,7 +12,8 @@
             </p>
         </div>
     </section>
-
+    <section class="features">
+    <div class="container">
     <!-- Sección de Simulaciones -->
     <section class="simulaciones-section">
         <div class="container">
@@ -56,4 +57,6 @@
             </div>
         </div>
     </section>
+</div>
+</section>
 @endsection
