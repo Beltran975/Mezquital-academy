@@ -1,29 +1,39 @@
+<head>
+    <link href="{{ asset('css/resources.css') }}" rel="stylesheet">
+</head>
+
 @extends('layouts.app')
+
+@section('title', 'Recursos de Ciberseguridad - Mezquital Academy')
 
 @section('content')
     <section class="features">
         <div class="container">
-            <h2 data-aos="fade-up" data-aos-duration="1000">Recursos de Ciberseguridad</h2>
 
-            <div class="mb-4">
-                <a href="{{ route('resources.index') }}" class="btn btn-secondary">Todos</a>
-                <a href="{{ route('resources.principiante') }}" class="btn btn-secondary">Principiante</a>
-                <a href="{{ route('resources.intermedio') }}" class="btn btn-secondary">Intermedio</a>
-                <a href="{{ route('resources.avanzado') }}" class="btn btn-secondary">Avanzado</a>
+            <!-- Sección de Título -->
+            <section class="features spacing-section">
+                <div class="container">
+                    <h1 data-aos="fade-up" data-aos-duration="1000" class="section-title">Recursos Educativos</h1>
+                </div>
+            </section>
+
+            <!-- Botones de Categorías -->
+            <div class="btn-group-custom">
+                <a href="{{ route('resources.index') }}" class="btn btn-custom-blue {{ Request::is('resources') ? 'active' : '' }}">Todos</a>
+                <a href="{{ route('resources.principiante') }}" class="btn btn-custom-blue {{ Request::is('resources/principiante') ? 'active' : '' }}">Principiante</a>
+                <a href="{{ route('resources.intermedio') }}" class="btn btn-custom-blue {{ Request::is('resources/intermedio') ? 'active' : '' }}">Intermedio</a>
+                <a href="{{ route('resources.avanzado') }}" class="btn btn-custom-blue {{ Request::is('resources/avanzado') ? 'active' : '' }}">Avanzado</a>
             </div>
 
+            <!-- Lista de Recursos -->
             <div class="feature-grid">
                 @foreach ($resources as $resource)
                     <div class="feature-card" data-aos="fade-up" data-aos-duration="1200">
-                        <h3>{{ $resource->title }}</h3>
-                        <img src="{{ $resource->image }}" alt="Imagen descriptiva" class="img-fluid w-100"
-                            style="height: 200px; object-fit: cover;">
-
-                        <p>{{ $resource->description }}</p>
+                        <h3 class="resource-title">{{ $resource->title }}</h3>
+                        <img src="{{ $resource->image }}" alt="Imagen descriptiva" class="resource-image">
+                        <p class="resource-description">{{ $resource->description }}</p>
                         <p>
-                            <small class="text-white">
-                                Por {{ $resource->by }}
-                            </small>
+                            <small class="resource-author">Por {{ $resource->by }}</small>
                         </p>
                         <a href="{{ $resource->src }}" target="_blank" class="btn btn-primary">Ver recurso</a>
                     </div>
