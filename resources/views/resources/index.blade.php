@@ -15,8 +15,10 @@
             <div class="feature-grid">
                 @foreach ($resources as $resource)
                     <div class="feature-card" data-aos="fade-up" data-aos-duration="1200">
-                        <i class="fas fa-graduation-cap"></i>
                         <h3>{{ $resource->title }}</h3>
+                        <img src="{{ $resource->image }}" alt="Imagen descriptiva" class="img-fluid w-100"
+                            style="height: 200px; object-fit: cover;">
+
                         <p>{{ $resource->description }}</p>
                         <p>
                             <small class="text-white">
