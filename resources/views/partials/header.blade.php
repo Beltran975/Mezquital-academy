@@ -7,19 +7,23 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link {{ Request::routeIs('inicioSimulaciones') ? 'active' : '' }}" 
+          <a class="nav-link {{ Request::routeIs('inicioSimulaciones') ? 'active' : '' }}"
              href="{{ route('inicioSimulaciones') }}">Simulaciones</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::routeIs('casos.index') ? 'active' : '' }}" 
+          <a class="nav-link {{ Request::routeIs('casos.index') ? 'active' : '' }}"
              href="{{ route('casos.index') }}">Casos Prácticos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::routeIs('tools.index') ? 'active' : '' }}" 
+          <a class="nav-link {{ Request::routeIs('tools.index') ? 'active' : '' }}"
              href="{{ route('tools.index') }}">Herramientas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::routeIs('news.index') ? 'active' : '' }}" 
+            <a class="nav-link {{ Request::routeIs('resources.index') ? 'active' : '' }}"
+               href="{{ route('resources.index') }}">Recursos Educativos</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::routeIs('news.index') ? 'active' : '' }}"
              href="{{ route('news.index') }}">Noticias</a>
         </li>
 
@@ -31,7 +35,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
-                <a class="dropdown-item {{ Request::routeIs('profile.edit') ? 'active' : '' }}" 
+                <a class="dropdown-item {{ Request::routeIs('profile.edit') ? 'active' : '' }}"
                    href="{{ route('profile.edit') }}">Editar perfil</a>
               </li>
               <li>

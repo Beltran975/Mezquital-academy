@@ -12,7 +12,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\SimulacionController;
 use App\Http\Controllers\ResourceController;
 
-
     // Rutas públicas
     Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
     Route::post('/register', [AuthController::class, 'register'])->name('register.post');
@@ -53,11 +52,14 @@ use App\Http\Controllers\ResourceController;
     Route::get('/casos-practicos', [CasoController::class, 'index'])->name('casos.index');
 
     Route::get('/recuros-educativos', [ResourceController::class, 'index'])->name('resources.index');
+    Route::get('/recursos/principiante',[ResourceController::class, 'getPrincipiante'])->name('resources.principiante');
+    Route::get('/recursos/intermedio',[ResourceController::class, 'getIntermedio'])->name('resources.intermedio');
+    Route::get('/recursos/avanzado',[ResourceController::class, 'getAvanzado']) ->name('resources.avanzado');
 
     // Cerrar sesión
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    
+
     Route::get('/simulaciones/ataques', [SimulacionController::class, 'mostrarAtaques'])->name('mostrarAtaques');
     Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
 
