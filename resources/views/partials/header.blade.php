@@ -6,10 +6,22 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="{{ route('inicioSimulaciones') }}">Simulaciones</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('casos.index') }}">Casos Prácticos</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('tools.index') }}">Herramientas</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ route('news.index') }}">Noticias</a></li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::routeIs('inicioSimulaciones') ? 'active' : '' }}" 
+             href="{{ route('inicioSimulaciones') }}">Simulaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::routeIs('casos.index') ? 'active' : '' }}" 
+             href="{{ route('casos.index') }}">Casos Prácticos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::routeIs('tools.index') ? 'active' : '' }}" 
+             href="{{ route('tools.index') }}">Herramientas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ Request::routeIs('news.index') ? 'active' : '' }}" 
+             href="{{ route('news.index') }}">Noticias</a>
+        </li>
 
         @auth
           <!-- Usuario autenticado -->
@@ -18,15 +30,16 @@
               {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <a class="dropdown-item" href="{{ route('profile.edit') }}">Editar perfil</a>
-            </li>
-            <li>
-              <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="dropdown-item">Cerrar sesión</button>
-              </form>
-            </li>
+              <li>
+                <a class="dropdown-item {{ Request::routeIs('profile.edit') ? 'active' : '' }}" 
+                   href="{{ route('profile.edit') }}">Editar perfil</a>
+              </li>
+              <li>
+                <form action="{{ route('logout') }}" method="POST">
+                  @csrf
+                  <button type="submit" class="dropdown-item">Cerrar sesión</button>
+                </form>
+              </li>
             </ul>
           </li>
         @endauth
