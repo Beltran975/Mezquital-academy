@@ -9,6 +9,7 @@ use App\Http\Controllers\PracticasController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\chatGPTController;
 use App\Http\Controllers\SimulacionController;
 use App\Http\Controllers\ResourceController;
 
@@ -61,9 +62,8 @@ use App\Http\Controllers\ResourceController;
 
 
     Route::post('/chat', [ChatController::class, 'chat'])->name('chat');
-
+      
     Route::get('/simulaciones/phishing', [PracticasController::class, 'mostrarPhishing'])->name('mostrarPhishing');
     Route::get('/simulaciones/compras-seguras', [PracticasController::class, 'mostrarComprasSeguras'])->name('practicas.compras-seguras');
     Route::get('/simulaciones/wifi-publico', [PracticasController::class, 'mostrarWiFiPublico'])->name('practicas.wifi-publico');
-
 });
