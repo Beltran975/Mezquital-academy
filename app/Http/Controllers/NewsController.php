@@ -22,17 +22,13 @@ class NewsController extends Controller
      */
     public function index(Request $request)
 {
-    // Obtener los parámetros de búsqueda
+
     $query = $request->get('q', 'cybersecurity');
     $from = $request->get('from');
     $to = $request->get('to');
     $exclude = $request->get('exclude');
 
-    // Obtener las noticias filtradas
     $news = $this->newsService->getCybersecurityNews($query, $from, $to, $exclude);
-
-    // Verificar la respuesta (opcional, solo para depuración)
-    // dd($news);
 
     return view('news.index', [
         'news' => $news['articles'] ?? [],

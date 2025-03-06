@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- Título fuera del contenedor, centrado arriba -->
   <h1 class="page-title">Mezquital Academy</h1>
 
   <div class="login-container">
@@ -37,13 +36,11 @@
 
       <div id="password-strength"></div>
 
-      <!-- Contenedor para los botones -->
       <div class="button-container">
         <button type="submit">Actualizar Perfil</button>
         <button type="button" onclick="window.location.href='{{ route('home') }}'">Cancelar</button>
       </div>
 
-      <!-- Recuadro único para mostrar errores debajo de los botones -->
       @if ($errors->any())
         <div class="error-message">
           <ul>
@@ -57,6 +54,5 @@
     </form>
   </div>
 
-  
 </body>
 </html>

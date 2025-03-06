@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultado = document.getElementById("resultado");
 
     btnReal.addEventListener("click", function () {
-        mostrarResultado(false); // Incorrecto
+        mostrarResultado(false); 
     });
 
     btnFalsa.addEventListener("click", function () {
-        mostrarResultado(true); // Correcto
+        mostrarResultado(true); 
     });
 
     function mostrarResultado(esFalsa) {

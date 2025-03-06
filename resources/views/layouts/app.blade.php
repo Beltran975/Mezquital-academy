@@ -19,27 +19,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-  <!-- Incluye el header -->
+
   @include('partials.header')
 
-  <!-- Contenido principal -->
   <main>
     @yield('content')
   </main>
 
-  <!-- Incluye el footer -->
   @include('partials.footer')
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <!-- Burbuja de chat (Fuera del main para que siempre esté disponible) -->
   <div class="chat-bubble" id="chatBubble">💬</div>
 
-  <!-- Ventana de chat -->
   <div class="chat-window" id="chatWindow">
     <div class="chat-header">
       <span>Asistente AI</span>
-      <!-- Botón de cerrar (X) -->
       <button class="close-chat" id="closeChat">X</button>
     </div>
     <div class="chat-body" id="chatBody"></div>
@@ -55,16 +50,13 @@
       const chatBubble = document.getElementById("chatBubble");
       const closeChatButton = document.getElementById("closeChat");
 
-      // Establecer la ventana de chat como cerrada al inicio (después de recargar)
       chatWindow.style.display = "none";
 
-      // Manejador para abrir/cerrar la ventana de chat con un solo clic
       chatBubble.addEventListener("click", function () {
-        const isVisible = chatWindow.style.display === "flex"; // Verifica si la ventana está visible
-        chatWindow.style.display = isVisible ? "none" : "flex"; // Alterna entre mostrar/ocultar
+        const isVisible = chatWindow.style.display === "flex"; 
+        chatWindow.style.display = isVisible ? "none" : "flex";
       });
 
-      // Cerrar la ventana de chat al hacer clic en la "X"
       closeChatButton.addEventListener("click", function () {
         chatWindow.style.display = "none";
       });
@@ -82,18 +74,14 @@
 
         let chatBody = document.getElementById("chatBody");
 
-        // Agregar el mensaje del usuario a la ventana de chat (derecha)
         chatBody.innerHTML += `<div class="message user-message"><strong>Tú:</strong> ${message}</div>`;
         input.value = "";
 
-        // Mostrar "Escribiendo..." mientras se obtiene la respuesta del asistente
         chatBody.innerHTML += `<div class="message ai-message"><strong>AI:</strong> <i>Escribiendo...</i></div>`;
         chatBody.scrollTop = chatBody.scrollHeight;
 
-        // Crear el prompt para que la respuesta sea resumida (aproximadamente 200 palabras)
         const prompt = `${message} Responde de manera breve, limitando tu respuesta a un máximo de 200 palabras.`;
 
-        // Enviar el mensaje al servidor con el prompt modificado
         fetch("/ask", {
             method: "POST",
             headers: {
@@ -106,7 +94,6 @@
         .then(data => {
             let aiResponse = data.answer || "Error al obtener respuesta.";
 
-            // Reemplazar "Escribiendo..." con la respuesta real del AI
             let aiMessages = document.querySelectorAll('.ai-message i');
             aiMessages.forEach(msg => msg.parentElement.innerHTML = `<strong>AI:</strong> ${processText(aiResponse)}`);
 
@@ -115,57 +102,50 @@
         .catch(error => console.error("Error:", error));
     }
 
-    // Función para procesar el texto y convertir signos especiales en formato HTML
     function processText(text) {
-        // Convertir los encabezados (por ejemplo, ### a <h3>)
+
         text = text.replace(/(#{1,6})\s*(.*)/g, (match, hashes, header) => {
-            const level = hashes.length; // Determina el nivel del encabezado (h1, h2, h3, etc.)
+            const level = hashes.length; 
             return `<h${level}>${header}</h${level}>`;
         });
 
-        // Convertir las negritas (** o __) a <strong>
         text = text.replace(/(\*\*|__)(.*?)\1/g, '<strong>$2</strong>');
 
-        // Convertir las listas (1. o -) en <ul><li> para listas ordenadas o no ordenadas
         text = text.replace(/(^|\n)[*-]\s*(.*)/g, '<ul><li>$2</li></ul>');
 
-        // Convertir los saltos de línea
         text = text.replace(/\n/g, '<br>');
 
         return text;
     }
   </script>
 
-  <!-- Estilos de la burbuja y el chat -->
   <style>
-    /* Burbuja de chat */
+ 
     .chat-bubble {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #007bff; /* Color base */
+      background-color: #007bff; 
       color: white;
       padding: 15px;
       border-radius: 50%;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-      z-index: 9999; /* Asegura que esté en primer plano */
+      z-index: 9999; 
       font-size: 1.5rem;
       transition: transform 0.3s ease;
     }
 
-    /* Efecto al pasar el ratón sobre la burbuja */
     .chat-bubble:hover {
       transform: scale(1.1);
     }
 
-    /* Ventana de chat */
     .chat-window {
       position: fixed;
-      bottom: 20px; /* Ajustado para pegarlo más abajo */
-      right: 20px; /* Pegado a la esquina derecha */
-      width: 350px; /* Tamaño fijo de la ventana de chat */
-      height: 450px; /* Tamaño fijo de la ventana de chat */
+      bottom: 20px; 
+      right: 20px; 
+      width: 350px; 
+      height: 450px; 
       background: white;
       border-radius: 12px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -176,7 +156,6 @@
       animation: slideIn 0.3s ease-out;
     }
 
-    /* Animación de entrada de la ventana de chat */
     @keyframes slideIn {
       0% {
         transform: translateY(20px);
@@ -188,9 +167,8 @@
       }
     }
 
-    /* Cabecera del chat */
     .chat-header {
-      background: #007bff; /* Color base */
+      background: #007bff; 
       color: white;
       padding: 15px;
       text-align: center;
@@ -201,7 +179,6 @@
       position: relative;
     }
 
-    /* Estilo del botón de cerrar (X) */
     .close-chat {
       position: absolute;
       top: 10px;
@@ -213,7 +190,6 @@
       cursor: pointer;
     }
 
-    /* Cuerpo del chat */
     .chat-body {
       flex: 1;
       overflow-y: auto;
@@ -221,10 +197,9 @@
       background-color: #f5f5f5;
       font-size: 1rem;
       line-height: 1.5;
-      color: black; /* Cambié el color a negro */
+      color: black; 
     }
 
-    /* Estilo de los mensajes */
     .message {
       padding: 5px 10px;
       margin-bottom: 10px;
@@ -233,23 +208,20 @@
       max-width: 80%;
     }
 
-    /* Mensajes del usuario (a la derecha) */
     .user-message {
-      background-color: #007bff; /* Color de fondo para el usuario */
+      background-color: #007bff; 
       color: white;
       text-align: right;
       margin-left: auto;
       border-radius: 10px;
     }
 
-    /* Mensajes del AI (a la izquierda) */
     .ai-message {
-      background-color: #f1f1f1; /* Color de fondo para el AI */
+      background-color: #f1f1f1; 
       color: black;
       text-align: left;
     }
 
-    /* Pie de la ventana de chat */
     .chat-footer {
       display: flex;
       padding: 12px;
@@ -259,7 +231,6 @@
       border-top: 1px solid #ddd;
     }
 
-    /* Estilo del campo de texto */
     .chat-footer input {
       flex: 1;
       padding: 10px;
@@ -271,12 +242,11 @@
     }
 
     .chat-footer input:focus {
-      border-color: #007bff; /* Color base */
+      border-color: #007bff; 
     }
 
-    /* Estilo del botón de envío */
     .chat-footer button {
-      background: #007bff; /* Color base */
+      background: #007bff; 
       color: white;
       border: none;
       padding: 10px 15px;
@@ -288,14 +258,14 @@
     }
 
     .chat-footer button:hover {
-      background: #0056b3; /* Un tono más oscuro del color base */
+      background: #0056b3; 
     }
   </style>
 
-  <!-- Scripts externos -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <!-- Scripts personalizados compilados -->
+
   <script src="{{ asset('js/app.js') }}"></script>
   <script>
     AOS.init();

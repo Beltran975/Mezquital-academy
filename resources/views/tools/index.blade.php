@@ -3,7 +3,7 @@
 @section('title', 'Herramientas Recomendadas - Mezquital Academy')
 
 @section('content')
-    <!-- Hero Section para Herramientas -->
+
 <section class="hero">
     <div class="container">
         <h1 data-aos="fade-up" data-aos-duration="1000">Herramientas de Ciberseguridad</h1>
@@ -16,11 +16,10 @@
       <div class="container">
           <h2 data-aos="fade-up" data-aos-duration="1000">Herramientas Recomendadas</h2>
 
-          <!-- Lista de herramientas -->
           <div class="tools-grid">
               <div class="tool-card full-width" data-aos="fade-up" data-aos-duration="1200">
                   <div class="tool-icon">
-                      <i class="fas fa-shield-alt"></i> <!-- Icono de seguridad -->
+                      <i class="fas fa-shield-alt"></i> 
                   </div>
                   <h3>VirusTotal</h3>
                   <p>
@@ -33,7 +32,7 @@
 
               <div class="tool-card full-width" data-aos="fade-up" data-aos-duration="1400">
                   <div class="tool-icon">
-                      <i class="fas fa-lock"></i> <!-- Icono de SSL -->
+                      <i class="fas fa-lock"></i> 
                   </div>
                   <h3>SSL Labs Server Test</h3>
                   <p>
@@ -46,7 +45,7 @@
 
               <div class="tool-card full-width" data-aos="fade-up" data-aos-duration="1600">
                   <div class="tool-icon">
-                      <i class="fas fa-key"></i> <!-- Icono de contraseña -->
+                      <i class="fas fa-key"></i> 
                   </div>
                   <h3>Kaspersky Password Checker</h3>
                   <p>
@@ -59,7 +58,7 @@
 
               <div class="tool-card full-width" data-aos="fade-up" data-aos-duration="2000">
                   <div class="tool-icon">
-                      <i class="fas fa-exclamation-triangle"></i> <!-- Icono de alerta -->
+                      <i class="fas fa-exclamation-triangle"></i> 
                   </div>
                   <h3>Have I Been Pwned</h3>
                   <p>

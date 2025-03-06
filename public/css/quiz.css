@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #1a1a1a; /* Negro */
+    background-color: #1a1a1a; 
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -11,8 +11,8 @@
 }
 
 .question {
-    background-color: #333; /* Gris oscuro */
-    color: #fff; /* Blanco */
+    background-color: #333; 
+    color: #fff; 
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -34,8 +34,8 @@
 
 .answer-btn:nth-child(1) {
     grid-area: answer1;
-    background-color: #1a1a1a; /* Negro */
-    color: #00ff00; /* Verde */
+    background-color: #1a1a1a; 
+    color: #00ff00; 
     border: 2px solid #00ff00;
     padding: 10px;
     border-radius: 5px;
@@ -45,8 +45,8 @@
 
 .answer-btn:nth-child(2) {
     grid-area: answer2;
-    background-color: #1a1a1a; /* Negro */
-    color: #00ff00; /* Verde */
+    background-color: #1a1a1a; 
+    color: #00ff00; 
     border: 2px solid #00ff00;
     padding: 10px;
     border-radius: 5px;
@@ -56,8 +56,8 @@
 
 .answer-btn:nth-child(3) {
     grid-area: answer3;
-    background-color: #1a1a1a; /* Negro */
-    color: #00ff00; /* Verde */
+    background-color: #1a1a1a; 
+    color: #00ff00; 
     border: 2px solid #00ff00;
     padding: 10px;
     border-radius: 5px;
@@ -66,16 +66,16 @@
 }
 
 .answer-btn:hover {
-    background-color: #00ff00; /* Verde */
-    color: #1a1a1a; /* Negro */
+    background-color: #00ff00; 
+    color: #1a1a1a; 
 }
 
 .timer {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #333; /* Gris oscuro */
-    color: #fff; /* Blanco */
+    background-color: #333; 
+    color: #fff; 
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1.5em;

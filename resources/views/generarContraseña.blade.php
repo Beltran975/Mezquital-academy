@@ -3,7 +3,7 @@
 @section('title', 'Verificar Contraseña - Mezquital Academy')
 
 @section('content')
-  <!-- Password Verification Section -->
+
   <section class="features" id="verificacion">
     <div class="container">
       <h2 data-aos="fade-up" data-aos-duration="1000">Verifica tu Contraseña</h2>

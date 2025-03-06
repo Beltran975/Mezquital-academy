@@ -27,10 +27,8 @@ class chatGPTController extends Controller
                 ],
             ]);
 
-            // Decodificar la respuesta
             $body = json_decode($response->getBody(), true);
 
-            // Extraer la respuesta generada por el modelo
             $answer = $body['choices'][0]['message']['content'];
 
             return response()->json(['answer' => $answer]);

@@ -3,7 +3,6 @@
 @section('title', 'Inicio - Mezquital Academy')
 
 @section('content')
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <h1 data-aos="fade-up" data-aos-duration="1000">Domina la Ciberseguridad</h1>
@@ -13,7 +12,6 @@
     </div>
   </section>
   
-  <!-- Features Section -->
   <section class="features" id="simulaciones">
     <div class="container">
       <h2 data-aos="fade-up" data-aos-duration="1000">Lo que Aprenderás</h2>

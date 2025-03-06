@@ -3,7 +3,7 @@
 @section('title', 'Casos Prácticos - Mezquital Academy')
 
 @section('content')
-<!-- Hero Section para Casos Prácticos -->
+
 <section class="hero">
     <div class="container">
         <h1 data-aos="fade-up" data-aos-duration="1000">Curiosidades</h1>
@@ -15,10 +15,8 @@
   <section class="casos-section">
       <div class="container">
           <h2 data-aos="fade-up" data-aos-duration="1000">Curiosides a lo largo del tiempo</h2>
-          <!-- Casos Históricos -->
           <h3 class="subtitle" id="historicos" data-aos="fade-up" data-aos-duration="1400">Casos Históricos</h3>
           <div class="casos-grid">
-              <!-- Caso 1: WannaCry -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -38,7 +36,6 @@
                   </div>
               </div>
 
-              <!-- Caso 2: Equifax -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -58,7 +55,6 @@
                   </div>
               </div>
 
-              <!-- Caso 3: Stuxnet -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -78,7 +74,6 @@
                   </div>
               </div>
 
-              <!-- Caso 4: Sony Pictures -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -98,7 +93,6 @@
                   </div>
               </div>
 
-              <!-- Caso 5: Yahoo Data Breach -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -118,7 +112,6 @@
                   </div>
               </div>
 
-              <!-- Caso 6: Colonial Pipeline -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -138,7 +131,6 @@
                   </div>
               </div>
 
-              <!-- Caso 7: Target -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -158,7 +150,6 @@
                   </div>
               </div>
 
-              <!-- Caso 8: Marriott International -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -178,7 +169,6 @@
                   </div>
               </div>
 
-              <!-- Caso 9: NotPetya -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -198,7 +188,6 @@
                   </div>
               </div>
 
-              <!-- Caso 10: SolarWinds -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -218,7 +207,6 @@
                   </div>
               </div>
 
-              <!-- Caso 11: Ashley Madison -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1600">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -238,7 +226,6 @@
                   </div>
               </div>
 
-              <!-- Caso 12: LinkedIn -->
               <div class="caso-card historicos" data-aos="fade-up" data-aos-duration="1800">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -259,10 +246,8 @@
               </div>
           </div>
 
-          <!-- Casos Cotidianos -->
           <h3 class="subtitle" id="cotidianos" data-aos="fade-up" data-aos-duration="2000">Casos Cotidianos</h3>
           <div class="casos-grid">
-              <!-- Caso 1: Phishing -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -282,7 +267,6 @@
                   </div>
               </div>
 
-              <!-- Caso 2: Apps Maliciosas -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -302,7 +286,6 @@
                   </div>
               </div>
 
-              <!-- Caso 3: Wi-Fi Público Inseguro -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -322,7 +305,6 @@
                   </div>
               </div>
 
-              <!-- Caso 4: Robo de Identidad en Redes Sociales -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -342,7 +324,6 @@
                   </div>
               </div>
 
-              <!-- Caso 5: SIM Swapping -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -362,7 +343,6 @@
                   </div>
               </div>
 
-              <!-- Caso 6: Fuga de Datos por Configuración Incorrecta en la Nube -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -382,7 +362,6 @@
                   </div>
               </div>
 
-              <!-- Caso 7: Phishing: Correos de Suplantación de Identidad -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -402,7 +381,6 @@
                   </div>
               </div>
 
-              <!-- Caso 8: Robo de Datos a Través de Redes Sociales -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -422,7 +400,6 @@
                   </div>
               </div>
 
-              <!-- Caso 9: Ataque de Ransomware a una Pequeña Empresa -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -442,7 +419,6 @@
                   </div>
               </div>
 
-              <!-- Caso 10: Fuga de Datos por Configuración Incorrecta en la Nube -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -462,27 +438,6 @@
                   </div>
               </div>
 
-              <!-- Caso 11: Ataque de SIM Swapping 
-              <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2200">
-                  <div class="caso-icon">
-                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>
-                  </div>
-                  <h3>Ataque de SIM Swapping</h3>
-                  <p>
-                      Un atacante convenció a una compañía telefónica para transferir el número de teléfono de una víctima a una tarjeta SIM bajo su control, permitiéndole acceder a cuentas bancarias.
-                  </p>
-                  <div class="button-container">
-                      <a href="https://www.wired.com/story/sim-swapping-phone-theft/" 
-                         class="btn btn-primary leer-mas" 
-                         target="_blank" 
-                         data-title="Ataque de SIM Swapping" 
-                         data-description="Un atacante convenció a una compañía telefónica para transferir el número de teléfono de una víctima a una tarjeta SIM bajo su control, permitiéndole acceder a cuentas bancarias.">
-                          Leer más
-                      </a>
-                  </div>
-              </div>-->
-
-              <!-- Caso 12: Fuga de Datos por Configuración Incorrecta en la Nube -->
               <div class="caso-card cotidianos" data-aos="fade-up" data-aos-duration="2400">
                   <div class="caso-icon">
                       <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent" speed="1" loop autoplay></lottie-player>

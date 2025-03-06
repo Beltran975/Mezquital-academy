@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultado = document.getElementById("resultado");
 
     btnReal.addEventListener("click", function () {
-        mostrarResultado(true); // Correcto
+        mostrarResultado(true); 
     });
 
     btnFalso.addEventListener("click", function () {
-        mostrarResultado(false); // Incorrecto
+        mostrarResultado(false); 
     });
 
     function mostrarResultado(esCorrecto) {
@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
             resultado.classList.remove("correcto");
         }
 
-        // Mostrar el resultado con animación
         resultado.style.display = "block";
         resultado.style.opacity = 0;
         resultado.style.transform = "translateY(-10px)";
@@ -36,6 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.getElementById("btnSiguiente").addEventListener("click", function () {
-        window.location.href = siguienteUrl; // Usa la URL asignada en Blade
+        window.location.href = siguienteUrl;
     });
 });

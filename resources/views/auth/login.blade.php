@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mezquital Academy</title> <!-- Título en la pestaña -->
+  <title>Mezquital Academy</title> 
   <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Título fuera del contenedor, centrado arriba -->
   <h1 class="page-title">Mezquital Academy</h1>
 
   <div class="login-container">
@@ -24,14 +23,11 @@
       <label for="password">Contraseña</label>
       <input type="password" name="password" id="password" required>
 
-      <!-- Contenedor para los botones -->
       <div class="button-container">
         <button type="submit">Iniciar sesión</button>
-        <!-- Aquí mantenemos el botón de registro con la acción de redirigir -->
         <button type="button" onclick="window.location.href='{{ route('register') }}'">Registrarse</button>
       </div>
 
-      <!-- Recuadro único para mostrar todos los errores debajo de los botones -->
       @if ($errors->any())
         <div class="error-message">
           <ul>

@@ -2,7 +2,7 @@
 
 @section('title', 'Simulación de Uso de Wi-Fi Público - Mezquital Academy')
 
-@section('content') <!-- Inicia la sección "content" -->
+@section('content') 
 <section class="features">
 <div class="container">
 <section class="simulacion-container">
@@ -32,4 +32,4 @@
 </section>
 
 <script src="{{ asset('js/wifi-publico.js') }}"></script>
-@endsection <!-- Cierra la sección "content" -->
+@endsection 

@@ -13,10 +13,10 @@
 
         <style>
     .email img {
-        width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor */
-        height: 300px; /* Establece una altura fija */
-        object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-        border-radius: 8px; /* Opcional: añade bordes redondeados */
+        width: 100%; 
+        height: 300px; 
+        object-fit: cover; 
+        border-radius: 8px; 
     }
 </style>
 

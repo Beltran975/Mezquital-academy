@@ -12,7 +12,7 @@ return new class extends Migration {
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->rememberToken(); // Para mantener la sesión activa si el usuario lo elige
+            $table->rememberToken(); 
             $table->timestamps();
         });
     }

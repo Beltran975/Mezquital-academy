@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultado = document.getElementById("resultado");
 
     btnAtaque.addEventListener("click", function () {
-        mostrarResultado(true); // Correcto
+        mostrarResultado(true); 
     });
 
     btnLegitimo.addEventListener("click", function () {
-        mostrarResultado(false); // Incorrecto
+        mostrarResultado(false); 
     });
 
     function mostrarResultado(esAtaque) {

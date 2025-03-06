@@ -16,12 +16,12 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
-        $user = auth()->user(); // Obtener el usuario autenticado
+        $user = auth()->user(); 
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'password' => [
-                'nullable', // Opcional: solo validar si se quiere cambiar
+                'nullable', 
                 'string',
                 'min:12',
                 'confirmed',
@@ -37,10 +37,8 @@ class ProfileController extends Controller
             return back()->withErrors($validator)->withInput();
         }
 
-        // Actualizar los datos del usuario
         $user->name = $request->name;
 
-        // Si se proporciona una nueva contraseña, actualizarla
         if ($request->filled('password')) {
             $user->password = Hash::make($request->password);
         }

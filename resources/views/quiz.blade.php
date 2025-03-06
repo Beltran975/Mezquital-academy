@@ -3,7 +3,7 @@
 @section('title', 'Simulaciones - Mezquital Academy')
 
 @section('content')
-    <!-- Hero Section -->
+
     <section class="hero">
         <div class="container">
         <div id="quizContainer" class="quiz-container">
@@ -15,7 +15,6 @@
             <div id="timer" class="timer"></div>
             </div>
 
-            <!-- Contenedor de resultados oculto al inicio -->
             <div id="resultContainer" class="result-container" style="display: none;">
                 <h2>Resultados del Quiz</h2>
                 <p>Respuestas correctas: <span id="correctAnswers">0</span> de <span id="totalQuestions">0</span></p>

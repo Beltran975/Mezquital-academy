@@ -29,8 +29,7 @@
       </ul>
 
       @auth
-        <!-- Contenedor separado para el nombre del usuario, alineado a la derecha -->
-        <ul class="navbar-nav ms-auto"> <!-- Este bloque se mueve a la derecha -->
+        <ul class="navbar-nav ms-auto"> 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
               {{ Auth::user()->name }}

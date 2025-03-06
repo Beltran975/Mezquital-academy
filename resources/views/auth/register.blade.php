@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- Título fuera del contenedor, centrado arriba -->
   <h1 class="page-title">Mezquital Academy</h1>
 
   <div class="login-container">
@@ -29,13 +28,11 @@
       <label for="password_confirmation">Confirmar Contraseña</label>
       <input type="password" name="password_confirmation" id="password_confirmation" required>
 
-      <!-- Contenedor para los botones -->
       <div class="button-container">
         <button type="submit">Registrarse</button>
         <button type="button" onclick="window.location.href='{{ route('login') }}'">Ya tengo cuenta</button>
       </div>
 
-      <!-- Recuadro único para mostrar todos los errores -->
       @if ($errors->any())
         <div class="error-message">
           <ul>

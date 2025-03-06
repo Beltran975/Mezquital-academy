@@ -42,7 +42,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => bcrypt($request->password), // Usar bcrypt manualmente
+            'password' => bcrypt($request->password), 
         ]);
         
 
@@ -56,19 +56,16 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        // Validación de las credenciales del usuario
         $credentials = $request->validate([
             'email' => 'required|email',
             'password' => 'required|string',
         ]);
     
-        // Si la validación y el login son exitosos
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->route('home')->with('success', 'Inicio de sesión exitoso.');
         }
     
-        // Si las credenciales son incorrectas
         return back()->withErrors([
             'email' => 'Las credenciales proporcionadas no son correctas.',
         ]);
