@@ -6,11 +6,12 @@
 
 ## 🛠️ Tecnologías Utilizadas
 
-Este proyecto se construyó utilizando herramientas estratégicas para asegurar su rendimiento y protección:
+Este proyecto se construyó utilizando herramientas elegidas estratégicamente para asegurar su rendimiento y protección:
 
-- **🖥️ Frameworks:** Laravel y Bootstrap.
+- **🖥️ Frameworks:** Laravel y Bootstrap para garantizar una plataforma sólida y eficiente.
 - **🗄️ Base de datos:** MySQL.
-- **📌 Control de versiones:** Git, con almacenamiento en GitHub.
+- **📌 Control de versiones:** Git, facilitando la colaboración entre desarrolladores.
+- **☁️ Almacenamiento en la nube:** GitHub.
 - **🌍 Alojamiento:** VPS con Ubuntu.
 - **🌐 Servidor web:** Nginx.
 - **🔒 Seguridad:**
@@ -49,7 +50,7 @@ Este proyecto se construyó utilizando herramientas estratégicas para asegurar 
 - **Composer:** Para la gestión de dependencias.
 - **Laravel:** Se recomienda Laravel 8 o superior.
 - **Base de datos:** MySQL, PostgreSQL o la que prefieras.
-
+- **Node.js y npm:** Para compilar y gestionar activos front-end (CSS, JS).
 
 ---
 
@@ -57,7 +58,7 @@ Este proyecto se construyó utilizando herramientas estratégicas para asegurar 
 
 1️⃣ **Clonar el repositorio:**
 ```bash
-git clone https://github.com/Beltran975/Mezquital-academy.git
+git clone https://github.com/tuusuario/mezquital-academy.git
 cd mezquital-academy
 ```
 
@@ -66,14 +67,20 @@ cd mezquital-academy
 composer install
 ```
 
-3️⃣ **Configurar el archivo de entorno:**
-   - Copia el archivo `.env.example` a `.env` y configura la conexión a la base de datos, claves de API (como `News API` y `DEEP_SEEK`), y otros parámetros necesarios.
+3️⃣ **Instalar dependencias de Node.js:**
+```bash
+npm install
+npm run dev
+```
+
+4️⃣ **Configurar el archivo de entorno:**
+   - Copia el archivo `.env.example` a `.env` y configura la conexión a la base de datos, claves de API (como `OPENAI_API_KEY` y `DEEP_SEEK`), y otros parámetros necesarios.
    - Genera la clave de la aplicación:
 ```bash
 php artisan key:generate
 ```
 
-4️⃣  **Migrar la base de datos:**
+5️⃣ **Migrar la base de datos:**
 ```bash
 php artisan migrate
 ```
@@ -135,13 +142,13 @@ php artisan migrate
 
 ## 📜 Licencia
 
-Este proyecto se distribuye bajo la **[Licencia MIT](LICENSE)**.
+Este proyecto se distribuye bajo la Licencia MIT.
 
 ---
 
 ## 📩 Contacto
 
-📧 Para dudas o sugerencias, puedes escribir a: [tuemail@dominio.com](mailto:tuemail@dominio.com)
+📧 Para dudas o sugerencias, puedes escribir a: 
 
 ---
 
