@@ -66,21 +66,14 @@ cd mezquital-academy
 ```bash
 composer install
 ```
-
-3️⃣ **Instalar dependencias de Node.js:**
-```bash
-npm install
-npm run dev
-```
-
-4️⃣ **Configurar el archivo de entorno:**
+3️⃣ **Configurar el archivo de entorno:**
    - Copia el archivo `.env.example` a `.env` y configura la conexión a la base de datos, claves de API (como `News API` y `DEEP_SEEK`), y otros parámetros necesarios.
    - Genera la clave de la aplicación:
 ```bash
 php artisan key:generate
 ```
 
-5️⃣ **Migrar la base de datos:**
+4️⃣ **Migrar la base de datos:**
 ```bash
 php artisan migrate
 ```
