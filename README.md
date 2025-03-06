@@ -148,7 +148,7 @@ Este proyecto se distribuye bajo la Licencia MIT.
 
 ## 📩 Contacto
 
-📧 Para dudas o sugerencias, puedes escribir a: 
+📧 Para dudas o sugerencias, puedes escribir a: academymezquital@gmail.com
 
 ---
 
