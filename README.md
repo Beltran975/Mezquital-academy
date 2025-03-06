@@ -74,7 +74,7 @@ npm run dev
 ```
 
 4️⃣ **Configurar el archivo de entorno:**
-   - Copia el archivo `.env.example` a `.env` y configura la conexión a la base de datos, claves de API (como `OPENAI_API_KEY` y `DEEP_SEEK`), y otros parámetros necesarios.
+   - Copia el archivo `.env.example` a `.env` y configura la conexión a la base de datos, claves de API (como `News API` y `DEEP_SEEK`), y otros parámetros necesarios.
    - Genera la clave de la aplicación:
 ```bash
 php artisan key:generate
