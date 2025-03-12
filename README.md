@@ -34,7 +34,7 @@ Este proyecto se construyó utilizando herramientas elegidas estratégicamente p
 - 📖 Ejercicios prácticos basados en **casos históricos** y **situaciones cotidianas**.
 
 ### 🤖 Asistente AI y Chat
-- 💬 Integración con la **API de OpenAI y DeepSeek** para generar respuestas en tiempo real mediante chat.
+- 💬 Integración con la **API de DeepSeek** para generar respuestas en tiempo real mediante chat.
 
 ### 🎯 Quiz Interactivo
 - 📊 Evaluación de conocimientos a través de cuestionarios con preguntas cargadas desde un archivo JSON.
